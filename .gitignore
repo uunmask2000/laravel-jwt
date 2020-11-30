@@ -1,0 +1,5 @@
+vendor/
+publoc/
+vendor
+publoc
+.env
