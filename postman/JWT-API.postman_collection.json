@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "998193be-4503-4406-b3f2-10b0f84c475f",
+		"name": "上機-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jim",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "0933045026",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "jim",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jim@com.tw",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "0933045026",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "jim",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jim@com.tw",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "使用者資訊",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc2NTIzMiwiZXhwIjoxNjA2NzY4ODMyLCJuYmYiOjE2MDY3NjUyMzIsImp0aSI6IkpqRHN6bkpNOE1HT0FWMEUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q_ewrWG42vERyeD6ZIXK96NamXdOg2PWTtWPqDVJGiU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "jim@com.tw",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/user-profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"user-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刷新token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc1OTkyNiwiZXhwIjoxNjA2NzYzNTI2LCJuYmYiOjE2MDY3NTk5MjYsImp0aSI6IlFLQ081RElVMlgwMUY5cVIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lMPE8xin1tpWW2D1Rj2oBdLEMm2ctkA2NEYhgBvf0n4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "jim@com.tw",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登出",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc2NDc0NywiZXhwIjoxNjA2NzY4MzQ3LCJuYmYiOjE2MDY3NjQ3NDcsImp0aSI6ImxkNGg4bUVVMmpIMjhMUGwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VehABzfsrXaeL_FhWA6CvJxpVcPj3OMDP_dGl_0aM9k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "jim",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "jim@com.tw",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "資料寫入",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc2NTI5MCwiZXhwIjoxNjA2NzY4ODkwLCJuYmYiOjE2MDY3NjUyOTAsImp0aSI6Imo4anJNcW1HUEF5RnhIZW4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.61dz5W60im_-xyTG2QNyOCH5J_5KF9kVw9BpCS1oWu8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc2NTI5MCwiZXhwIjoxNjA2NzY4ODkwLCJuYmYiOjE2MDY3NjUyOTAsImp0aSI6Imo4anJNcW1HUEF5RnhIZW4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.61dz5W60im_-xyTG2QNyOCH5J_5KF9kVw9BpCS1oWu8",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "message",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "資料回覆寫入",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc2ODkzMiwiZXhwIjoxNjA2NzcyNTMyLCJuYmYiOjE2MDY3Njg5MzIsImp0aSI6IjF2OThwMldHejVlcWFnMGQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8eZcuvo4wAGzMJaJi_EJFUgHBEb0sW5_3n2CkRKjRZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNjc2NTI5MCwiZXhwIjoxNjA2NzY4ODkwLCJuYmYiOjE2MDY3NjUyOTAsImp0aSI6Imo4anJNcW1HUEF5RnhIZW4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.61dz5W60im_-xyTG2QNyOCH5J_5KF9kVw9BpCS1oWu8",
+							"type": "text"
+						},
+						{
+							"key": "reply",
+							"value": "message",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/message/reply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"message",
+						"reply"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
