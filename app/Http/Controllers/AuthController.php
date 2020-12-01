@@ -78,7 +78,7 @@ class AuthController extends Controller
         }
 
         if (!$token = auth()->attempt($validator->validated())) {
-            return $this->mix_respone_body(['error' => 'Unauthorized'], 401);
+            return $this->mix_respone_body(['error' => 'Unauthorized1'], 401);
         }
 
         return $this->createNewToken($token);
